@@ -30,7 +30,7 @@ export const Todos = ({ info }) => {
   return (
     
     <div className='container'>
-      <h1>Contacts</h1>
+      
       { contacts.length===0? "No Contacts to display" :
         contacts.map((contact)=>{
           return <ListOfContacts list={ contact } key={ contact.S } ondelete={ onDelete } />

@@ -2,6 +2,8 @@ import React from 'react'
 
 export const ListOfContacts = ({list,ondelete}) => {
   return (
+    
+    
     <div>
         <h2>{ list.Name }</h2>
         <p>{ list.Number }</p>
@@ -10,5 +12,6 @@ export const ListOfContacts = ({list,ondelete}) => {
 
 
     </div>
+    
   )
 }
