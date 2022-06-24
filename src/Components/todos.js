@@ -1,5 +1,6 @@
 import { ListOfContacts } from "./list-of-contacts.js";
 import React,{ useState } from 'react';
+import Form  from "./form.js";
 
 
 export const Todos = ({ info }) => {
@@ -26,10 +27,23 @@ export const Todos = ({ info }) => {
       Number:90
     }
   ])
+  const addcontacts=(Name,Number)=>{
+    console.log("Added contact")
+    let S=contacts[contacts.length-1].S+1
+    const mycontacts={
+      S:S,
+      Name: Name,
+      Number: Number
+    }
+    setcontacts([...contacts,mycontacts])
+  }
+
   
   return (
     
     <div className='container'>
+      <h1>Contacts</h1>
+        <Form addcontacts={addcontacts} />
       
       { contacts.length===0? "No Contacts to display" :
         contacts.map((contact)=>{
